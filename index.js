@@ -6,6 +6,7 @@ const app = express()
 const dburi = "mongodb+srv://author:author123@cluster0-geoiq.mongodb.net/test?retryWrites=true";
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static('index.html'))
 
 mongoose.connect(dburi, { useNewUrlParser: true }).catch(err => {
     console.log("error occured", err);
