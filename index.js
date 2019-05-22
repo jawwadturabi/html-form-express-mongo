@@ -68,6 +68,6 @@ app.post("/signup", async (req, res) => {
             res.send(200, "Unable to save to database");
         });
 })
-app.listen(process.env.Port || 4000, () => {
+app.listen(process.env.Port || 4000,"0.0.0.0", () => {
     console.log("server running")
 })
